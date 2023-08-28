@@ -23,17 +23,13 @@ import FilterBtns from "@/components/filter/filterBtns.vue";
 import ContactModal from "@/components/contact/ContactModal.vue";
 
 const i18n: any = createI18n({
-  legacy: false,
   locale: "en",
   fallbackLocale: "en",
-  allowComposition: true,
   messages: {
     en,
     ka,
   },
-  fallbackWarn: false,
   silentFallbackWarn: true,
-  missingWarn: true,
 });
 
 const app = createApp(App);

@@ -17,6 +17,9 @@ declare module "@vue/runtime-core" {
 
 declare module "vue-i18n" {
   import { DefineComponent } from "vue";
+  interface ComponentCustomProperties {
+    $i18n: VueI18n;
+  }
   export function createI18n(options?: I18nOptions): I18n;
   export type LocaleMessages = Record<
     string,
