@@ -31,8 +31,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+
 import { useI18n } from "vue-i18n";
+import { ref } from "vue";
 
 const { locale } = useI18n();
 
@@ -50,12 +51,16 @@ const books = [
 ];
 
 const selectedIndex: any = ref(localStorage.getItem("lang"));
-if(isNaN(parseInt(selectedIndex.value)) || selectedIndex.value < 0 || selectedIndex.value >= books.length) {
-  selectedIndex.value = 0
-  localStorage.setItem('lang', selectedIndex.value)
-}else {
-  selectedIndex.value = localStorage.getItem("lang")
-  console.log(selectedIndex.value)
+if (
+  isNaN(parseInt(selectedIndex.value)) ||
+  selectedIndex.value < 0 ||
+  selectedIndex.value >= books.length
+) {
+  selectedIndex.value = 0;
+  localStorage.setItem("lang", selectedIndex.value);
+} else {
+  selectedIndex.value = localStorage.getItem("lang");
+  console.log(selectedIndex.value);
 }
 const selected = ref(books[selectedIndex.value]);
 locale.value = books[selectedIndex.value].countryCode;
@@ -91,10 +96,10 @@ const changeLocale = () => {
   min-width: 240px;
   right: -9px;
   padding: 6px;
-  background: theme('colors.white');
+  background: theme("colors.white");
   border-radius: 4px;
 }
-.iconify.iconify--ep path{
-  fill: theme('colors.black');
+.iconify.iconify--ep path {
+  fill: theme("colors.black");
 }
 </style>

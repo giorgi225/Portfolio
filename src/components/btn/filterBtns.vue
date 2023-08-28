@@ -4,7 +4,11 @@
       @click="handleFilter(item.val)"
       v-for="(item, index) in props.filterArr"
       :key="index"
-      :class="`${props.filterSelected.toLowerCase() === item.val.toLowerCase() ? '!bg-black text-white' : 'text-black'} flex items-end gap-2 px-4 py-2 bg-grayLight hover:bg-grayLight2 rounded transition-all`"
+      :class="`${
+        props.filterSelected.toLowerCase() === item.val.toLowerCase()
+          ? '!bg-black text-white'
+          : 'text-black'
+      } flex items-end gap-2 px-4 py-2 bg-grayLight hover:bg-grayLight2 rounded transition-all`"
     >
       <IconBase v-if="item.icon" :icon="item.icon" class="text-md" />
       <p class="font-mainMedium text-xs leading-[20px]">{{ $t(item.text) }}</p>
@@ -14,7 +18,7 @@
 
 <script setup lang="ts">
 import { PropType } from "vue";
-import { FilterBtnsProps } from "@/imports";
+import { FilterBtnsProps, FilterBtnsArr } from "@/imports";
 const props = defineProps({
   filterArr: {
     type: Array as PropType<FilterBtnsProps["filterArr"]>,
@@ -22,12 +26,12 @@ const props = defineProps({
   },
   filterSelected: {
     type: String as PropType<FilterBtnsProps["filterSelected"]>,
-    required: true
-  }
+    required: true,
+  },
 });
-const emit = defineEmits(['handleFilter'])
-const handleFilter = (val) => {
-  const value = val.toLowerCase()
-  emit('handleFilter', value)
+const emit = defineEmits(["handleFilter"]);
+const handleFilter = (val: FilterBtnsArr["val"]) => {
+  const value = val.toLowerCase();
+  emit("handleFilter", value);
 };
 </script>
