@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'main-black-italic';
+    src: url('../fonts/CeraProBlackItalic.otf');
+}
+.font-mainBlack-italic {
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'main-black';
+    src: url('../fonts/CeraProBlack.otf');
+}
+.font-mainBlack {
+    font-family: 'main-black';
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'main-bold';
+    src: url('../fonts/CeraProBold.otf');
+}
+.font-mainBold {
+    font-family: 'main-bold';
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'main-medium';
+    src: url('../fonts/CeraProMedium.otf');
+}
+.font-mainMedium {
+    font-family: 'main-medium';
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'main-light';
+    src: url('../fonts/CeraProLight.otf');
+}
+.font-mainLight {
+    font-family: 'main-light';
+    font-weight: 300;
+}
