@@ -37,8 +37,8 @@ import { useI18n } from "vue-i18n";
 import { usePageMetaData } from "@/composables/usePageMetaData";
 
 const {t} = useI18n()
-const metaTitle: string = "About Gigi Shalamberidze - Web Developer & Web Designer";
-const metaDescription: string = "Welcome to my corner of the digital realm! I'm Gigi Shalamberidze, a passionate web developer and creative web designer with 2 years experience. Learn about my journey into the digital world and my expertise in crafting captivating websites.";
-const metaKeywords: string = "About Gigi Shalamberidze, Web Developer, Freelancer Web Designer, 2 years experience, Programming, UI/UX design";
+const metaTitle = "About Gigi Shalamberidze - Web Developer & Web Designer";
+const metaDescription = "Passionate Web Developer & Creative Web Designer with 2 years of experience from Tbilisi, Georgia. Learn about my journey and expertise in crafting captivating websites.";
+const metaKeywords = "Web Developer, Web Designer, 2 years experience, UI/UX design, Tbilisi, Georgia";
 usePageMetaData(metaTitle, metaDescription, metaKeywords);
 </script>

@@ -2,12 +2,12 @@
   <div class="container-main py-20">
     <div class="w-full flex flex-col gap-6">
       <div v-if="!props.hasFilter && !props.filterArr" class="w-full">
-        <h3 class="font-mainMedium text-2xl text-black">
+        <h2 v-if="currentRoute" class="font-mainMedium text-2xl text-black">
           {{ t(currentRoute) }}
-        </h3>
+        </h2>
       </div>
       <div v-else class="w-full flex items-center justify-between">
-        <h3 class="font-mainMedium text-2xl text-black">
+        <h3 v-if="currentRoute" class="font-mainMedium text-2xl text-black">
           {{ t(currentRoute) }}
         </h3>
         <FilterBtns
@@ -26,13 +26,16 @@
 
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
-import { PropType } from "vue";
+import { PropType, ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import { pageLayoutProps, FilterBtnsArr } from "@/imports";
 const { t } = useI18n();
-const currentRoute = 'asd'
-console.log(useRoute().name)
 
+const currentRoute = ref(); // Define the reactive reference
+
+onMounted(() => {
+  currentRoute.value = useRoute().name; // Update the value on mount
+});
 const props = defineProps({
   hasFilter: {
     type: Boolean as PropType<pageLayoutProps["hasFilter"]>,

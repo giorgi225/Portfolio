@@ -14,6 +14,8 @@
       <div class="flex items-center gap-6 mt-6 translate-x-[-40px]">
         <div class="w-full max-w-[67px]">
           <img
+            width="100"
+            height="100"
             class="w-full toggle-image"
             src="@/assets/images/pointerArrow.svg"
             alt="Pointer-Arrow"
@@ -45,7 +47,9 @@
             {{ t("years_experience") }}
           </p>
           <img
-            class="h-full"
+            width="100"
+            height="100"
+            class="h-full w-auto"
             src="@/assets/images/developer_illustration.svg"
             alt="Developer Illustration"
           />
@@ -59,9 +63,11 @@
 import { useI18n } from "vue-i18n";
 import { usePageMetaData } from "@/composables/usePageMetaData";
 
-const {t} = useI18n()
+const { t } = useI18n();
 const metaTitle = "Gigi Shalamberidze - Web Developer & Web Designer";
-const metaDescription = "I am Gigi Shalamberidze, a passionate Web Developer & Web Designer with 2 years of experience from Tbilisi, Georgia. Let's create captivating websites together.";
-const metaKeywords = "Web Developer, Web Designer, Freelancer, 2 years experience, Tbilisi, Georgia";
+const metaDescription =
+  "Passionate Web Developer & Web Designer with 2 years of experience from Tbilisi, Georgia. Let's create captivating websites!";
+const metaKeywords =
+  "Web Developer, Web Designer, Freelancer, 2 years experience, Tbilisi, Georgia";
 usePageMetaData(metaTitle, metaDescription, metaKeywords);
 </script>

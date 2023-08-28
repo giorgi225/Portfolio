@@ -27,6 +27,8 @@
             </a>
           </div>
           <img
+            width="100"
+            height="100"
             class="w-full rounded-[11px]"
             :src="item.image"
             :alt="item.title"

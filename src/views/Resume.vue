@@ -51,7 +51,7 @@ import { usePageMetaData } from "@/composables/usePageMetaData";
 const { t } = useI18n();
 const metaTitle: string = "Resume - Gigi Shalamberidze";
 const metaDescription: string =
-  "Welcome to my resume! Explore my skills, experiences, and education that showcase my qualifications and journey in the field of web development and design.";
+  "Explore my skills, experiences, and education that showcase my qualifications and journey in the field of web development and design.";
 const metaKeywords: string =
   "Web Developer, Web Designer, Resume, Skills, Experiences, Education";
 usePageMetaData(metaTitle, metaDescription, metaKeywords);

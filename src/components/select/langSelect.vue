@@ -21,7 +21,8 @@
           option.countryCode === selected.countryCode ? 'bg-grayLight' : ''
         } flex items-center gap-2 p-2 hover:bg-grayLight2 cursor-default rounded`"
       >
-        <img :src="option.flag" class="w-[15px]" />
+        <img width="100"
+            height="100" :src="option.flag" class="w-[15px] h-auto" />
         <p class="font-mainLight text-sm text-black">
           {{ t(option.countryName) }}
         </p>

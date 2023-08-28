@@ -32,7 +32,7 @@ import { usePageMetaData } from "@/composables/usePageMetaData";
 const { t } = useI18n();
 const metaTitle: string = "Services - Gigi Shalamberidze";
 const metaDescription: string =
-  "Welcome to my Services page! Explore the professional services I offer to boost your online presence and digital success. From web development and design to SEO services.";
+  "Explore the professional services I offer to boost your online presence and digital success. From web development and design to SEO services.";
 const metaKeywords: string =
   "Web Developer, Web Designer, Services, Web Development, Design, SEO";
 
