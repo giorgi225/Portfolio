@@ -10,7 +10,7 @@
     <template #selected-option="option">
       <div class="flex items-center gap-2 cursor-pointer">
         <p class="font-mainLight text-sm text-black">
-          {{ $t(option.countryName) }}
+          {{ t(option.countryName) }}
         </p>
         <IconBase icon="ep:arrow-down" />
       </div>
@@ -23,7 +23,7 @@
       >
         <img :src="option.flag" class="w-[15px]" />
         <p class="font-mainLight text-sm text-black">
-          {{ $t(option.countryName) }}
+          {{ t(option.countryName) }}
         </p>
       </div>
     </template>
@@ -35,7 +35,7 @@
 import { useI18n } from "vue-i18n";
 import { ref } from "vue";
 
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 
 const books = [
   {

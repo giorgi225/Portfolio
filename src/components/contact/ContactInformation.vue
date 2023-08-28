@@ -1,13 +1,13 @@
 <template>
   <div class="w-full flex flex-col gap-3">
-    <h5 class="font-mainMedium text-md text-black">{{ $t("contact") }}</h5>
+    <h5 class="font-mainMedium text-md text-black">{{ t("contact") }}</h5>
     <div class="w-full flex flex-col gap-6">
       <div
         class="w-full flex items-center justify-between pb-3 border-b border-dashed border-grayDark"
       >
         <div class="flex flex-col gap-1">
           <p class="font-mainLight text-sm text-black leading-[20px]">
-            {{ $t("email") }}
+            {{ t("email") }}
           </p>
           <p class="font-mainLight text-xs text-black-80 leading-[20px]">
             gigi.shalamberidze2022@gmail.com
@@ -23,7 +23,7 @@
               class="text-md text-grayDark2"
             />
             <p class="font-mainLight text-sm text-black leading-[20px]">
-              {{ $t("compose") }}
+              {{ t("compose") }}
             </p>
           </a>
           <div class="btn-copy clipboard">
@@ -36,7 +36,7 @@
                 class="copy-icon text-md text-grayDark2"
               />
               <p class="font-mainLight text-sm text-black leading-[20px]">
-                {{ $t("copy") }}
+                {{ t("copy") }}
               </p>
             </button>
             <button
@@ -47,7 +47,7 @@
                 class="check-icon text-md text-grayDark2"
               />
               <p class="font-mainLight text-sm text-success leading-[20px]">
-                {{ $t("copied") }}
+                {{ t("copied") }}
               </p>
             </button>
           </div>
@@ -58,7 +58,7 @@
       >
         <div class="flex flex-col gap-1">
           <p class="font-mainLight text-sm text-black leading-[20px]">
-            {{ $t("phone") }}
+            {{ t("phone") }}
           </p>
           <p class="font-mainLight text-xs text-black-80 leading-[20px]">
             (+995) 574-17-51-88
@@ -74,7 +74,7 @@
               class="text-md text-grayDark2"
             />
             <p class="font-mainLight text-sm text-black leading-[20px]">
-              {{ $t("call") }}
+              {{ t("call") }}
             </p>
           </a>
           <div class="btn-copy clipboard">
@@ -87,7 +87,7 @@
                 class="copy-icon text-md text-grayDark2"
               />
               <p class="font-mainLight text-sm text-black leading-[20px]">
-                {{ $t("copy") }}
+                {{ t("copy") }}
               </p>
             </button>
             <button
@@ -98,7 +98,7 @@
                 class="check-icon text-md text-grayDark2"
               />
               <p class="font-mainLight text-sm text-success leading-[20px]">
-                {{ $t("copied") }}
+                {{ t("copied") }}
               </p>
             </button>
           </div>
@@ -109,10 +109,10 @@
       >
         <div class="flex flex-col gap-1">
           <p class="font-mainLight text-sm text-black leading-[20px]">
-            {{ $t("get_in_touch") }}
+            {{ t("get_in_touch") }}
           </p>
           <p class="font-mainLight text-xs text-black-80 leading-[20px]">
-            {{ $t("social_platforms") }}
+            {{ t("social_platforms") }}
           </p>
         </div>
         <div class="flex items-center">
@@ -134,8 +134,12 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { useClipboard } from "@/imports";
 import { SocialPlatformMenu } from "@/controllers/menuController";
+
+const {t} = useI18n()
+
 const email: string = "gigi.shalamberidze2022@gmail.com";
 const copyToClipboard = useClipboard();
 const copyEmail = (event: any) => {

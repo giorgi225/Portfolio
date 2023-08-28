@@ -12,7 +12,7 @@
           class="flex items-center gap-2 w-full px-2 py-2 rounded hover:bg-grayLight2 active:scale-[0.98] active:bg-grayLight2 transition-all"
         >
           <IconBase :icon="item.icon" class="text-black text-base" />
-          <p class="font-mainLight text-sm text-black">{{ $t(item.text) }}</p>
+          <p class="font-mainLight text-sm text-black">{{ t(item.text) }}</p>
         </RouterLink>
 
         <div
@@ -21,7 +21,7 @@
           class="flex items-center gap-2 w-full px-2 py-2 rounded hover:bg-grayLight2 cursor-pointer active:scale-[0.98] active:bg-grayLight2 transition-all"
         >
           <IconBase :icon="item.icon" class="text-black text-base" />
-          <p class="font-mainLight text-sm text-black">{{ $t(item.text) }}</p>
+          <p class="font-mainLight text-sm text-black">{{ t(item.text) }}</p>
         </div>
 
         <div
@@ -48,9 +48,9 @@
             />
           </div>
           <IconBase
-              icon="ph:check"
-              class="check-icon text-grayDark text-base group-hover:text-black transition-all"
-            />
+            icon="ph:check"
+            class="check-icon text-grayDark text-base group-hover:text-black transition-all"
+          />
         </div>
 
         <a
@@ -79,9 +79,11 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { PropType } from "vue";
 import { NavListProps } from "@/imports";
 
+const {t} = useI18n()
 const props = defineProps({
   title: {
     type: String as PropType<NavListProps["title"]>,
@@ -107,10 +109,10 @@ const props = defineProps({
     default: false,
   },
 });
-const emit = defineEmits()
+const emit = defineEmits();
 const handleCopy = (copyFun: string) => {
-  let target:any = event?.target
-  let targetDiv = target.closest('.clipboard')
+  let target: any = event?.target;
+  let targetDiv = target.closest(".clipboard");
   emit(copyFun, targetDiv);
 };
 </script>

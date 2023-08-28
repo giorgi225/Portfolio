@@ -11,14 +11,16 @@
       } flex items-end gap-2 px-4 py-2 bg-grayLight hover:bg-grayLight2 rounded transition-all`"
     >
       <IconBase v-if="item.icon" :icon="item.icon" class="text-md" />
-      <p class="font-mainMedium text-xs leading-[20px]">{{ $t(item.text) }}</p>
+      <p class="font-mainMedium text-xs leading-[20px]">{{ t(item.text) }}</p>
     </button>
   </div>
 </template>
 
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { PropType } from "vue";
 import { FilterBtnsProps, FilterBtnsArr } from "@/imports";
+const {t} = useI18n()
 const props = defineProps({
   filterArr: {
     type: Array as PropType<FilterBtnsProps["filterArr"]>,

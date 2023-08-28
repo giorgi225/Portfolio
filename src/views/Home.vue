@@ -7,8 +7,8 @@
         <h1
           class="font-mainBlack text-[6vw] text-black max-w-[46vw] leading-[7vw] tracking-[1px]"
         >
-          {{ $t("web_designer") }}
-          <span class="text-stroke-black">& {{ $t("developer") }}</span>
+          {{ t("web_designer") }}
+          <span class="text-stroke-black">& {{ t("developer") }}</span>
         </h1>
       </div>
       <div class="flex items-center gap-6 mt-6 translate-x-[-40px]">
@@ -21,12 +21,12 @@
         </div>
         <div class="flex flex-col gap-4">
           <p class="font-mainLight text-base text-black-80 max-w-[418px]">
-            {{ $t("welcome_text") }}
+            {{ t("welcome_text") }}
           </p>
           <button
             class="w-max px-7 py-3 bg-grayLight rounded text-sm font-mainMedium hover:bg-black-80 text-black hover:text-white hover:shadow-md active:scale-[0.98] active:bg-black transition-all"
           >
-            {{ $t("hire_me") }}
+            {{ t("hire_me") }}
           </button>
         </div>
       </div>
@@ -40,9 +40,9 @@
           <p
             class="absolute top-[-20px] left-[-50px] font-mainBlack-italic text-xl text-black max-w-[156px] leading-[1]"
           >
-            <span class="text-success">{{ $t("freelancer") }}</span>
-            {{ $t("with") }} <span class="text-3xl">2</span>
-            {{ $t("years_experience") }}
+            <span class="text-success">{{ t("freelancer") }}</span>
+            {{ t("with") }} <span class="text-3xl">2</span>
+            {{ t("years_experience") }}
           </p>
           <img
             class="h-full"
@@ -56,8 +56,10 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { usePageMetaData } from "@/composables/usePageMetaData";
 
+const {t} = useI18n()
 const metaTitle: string = "Gigi Shalamberidze - Web Designer & Developer";
 const metaDescription: string = "I am Gigi Shalamberidze, Web Developer & Web Designer with 2 years experience from Tbilisi, Georgia.";
 const metaKeywords: string = "Web Developer, Web Designer, Freelancer, 2 years experience, Tbilisi, Georgia";

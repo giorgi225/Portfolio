@@ -6,16 +6,20 @@
           class="flex w-full max-w-[77px]"
           :to="{ name: RouteName.HOME }"
         >
-          <img class="w-full toggle-image" src="@/assets/images/Logo.svg" alt="Logo" />
+          <img
+            class="w-full toggle-image"
+            src="@/assets/images/Logo.svg"
+            alt="Logo"
+          />
         </RouterLink>
         <div class="flex border-t border-b border-grayLight2 py-3 w-full">
           <nav
             class="h-[calc(100vh-190px)] overflow-auto no-scrollbar pr-2 flex flex-col w-full gap-4"
           >
-            <NavList :title="$t('pages')" :menu="PagesMenu" :hasRoutes="true" />
+            <NavList :title="t('pages')" :menu="PagesMenu" :hasRoutes="true" />
 
             <NavList
-              :title="$t('get_in_touch')"
+              :title="t('get_in_touch')"
               :menu="ContactMenu"
               @openContactModal="openContactModal"
               @copyEmail="copyEmail"
@@ -23,11 +27,11 @@
             />
 
             <NavList
-              :title="$t('social_platforms')"
+              :title="t('social_platforms')"
               :menu="SocialPlatformMenu"
               :hasLinks="true"
             />
-            <NavList :title="$t('settings')" :customProp="true">
+            <NavList :title="t('settings')" :customProp="true">
               <div
                 class="group flex items-center justify-between w-full px-2 py-2 rounded hover:bg-grayLight2 transition-all"
               >
@@ -37,7 +41,7 @@
                     class="text-black text-base"
                   />
                   <p class="font-mainLight text-sm text-black">
-                    {{ $t("dark_mode") }}
+                    {{ t("dark_mode") }}
                   </p>
                 </div>
                 <label
@@ -61,7 +65,7 @@
                 <div class="flex items-center gap-2">
                   <IconBase icon="et:global" class="text-black text-base" />
                   <p class="font-mainLight text-sm text-black">
-                    {{ $t("language") }}
+                    {{ t("language") }}
                   </p>
                 </div>
                 <LangSelect />
@@ -72,7 +76,7 @@
       </div>
       <div class="w-full flex items-center justify-center">
         <p class="font-mainLight text-black text-xs text-center">
-          {{ $t("copyright") }}
+          {{ t("copyright") }}
         </p>
       </div>
     </div>
@@ -82,6 +86,7 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { ref, Ref, onMounted } from "vue";
 import { RouteName, useClipboard } from "@/imports.ts";
 import {
@@ -90,6 +95,7 @@ import {
   SocialPlatformMenu,
 } from "@/controllers/menuController";
 
+const { t } = useI18n();
 const contactModal: Ref<boolean> = ref(false);
 const openContactModal = () => {
   toggleContactModal();
@@ -111,21 +117,23 @@ const copyPhone = (targetDiv: HTMLElement) => {
   copyToClipboard(phone, targetDiv);
 };
 
-const lightMode: Ref<boolean> = ref(localStorage.getItem('mode') === 'dark' ? true : false);
+const lightMode: Ref<boolean> = ref(
+  localStorage.getItem("mode") === "dark" ? true : false
+);
 const handleDarkMode = () => {
   toggleDarkMode();
 };
 const toggleDarkMode = () => {
-  if(lightMode.value) {
-    document.body.classList.add("dark")
-    localStorage.setItem('mode', 'dark')
-  }else {
+  if (lightMode.value) {
+    document.body.classList.add("dark");
+    localStorage.setItem("mode", "dark");
+  } else {
     document.body.classList.remove("dark");
-    localStorage.removeItem('mode')
+    localStorage.removeItem("mode");
   }
 };
 
-onMounted(()=> {
-  toggleDarkMode()
-})
+onMounted(() => {
+  toggleDarkMode();
+});
 </script>

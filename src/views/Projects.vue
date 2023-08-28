@@ -22,7 +22,7 @@
             >
               <IconBase icon="ph:link-bold" class="text-xl text-black" />
               <p class="font-mainMedium text-md text-black">
-                {{ $t("open_project") }}
+                {{ t("open_project") }}
               </p>
             </a>
           </div>
@@ -37,7 +37,7 @@
         >
           <div class="w-full flex items-center justify-between gap-4">
             <p class="font-mainBold text-2xl text-black">
-              {{ $t(item.title) }}
+              {{ t(item.title) }}
             </p>
             <div class="flex items-center gap-2">
               <div
@@ -52,7 +52,7 @@
                 } flex items-center gap-[6px] px-4 py-2 rounded`"
               >
                 <IconBase :icon="categoryItem.icon" />
-                {{ $t(categoryItem.text) }}
+                {{ t(categoryItem.text) }}
               </div>
             </div>
           </div>
@@ -62,7 +62,10 @@
               :key="skillIndex"
               class="flex items-center py-[6px] px-4 gap-[6px] bg-grayLight rounded-full"
             >
-              <IconBase :icon="skill.programingLanguageIcon" class="text-black"/>
+              <IconBase
+                :icon="skill.programingLanguageIcon"
+                class="text-black"
+              />
               <p class="font-mainLight text-sm text-black">
                 {{ skill.programingLanguage }}
               </p>
@@ -75,13 +78,17 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { ref, Ref, onMounted } from "vue";
 import { ProjectsArr, FilterBtnsArr, ProjectFilter } from "@/imports";
 import { usePageMetaData } from "@/composables/usePageMetaData";
 
+const { t } = useI18n();
 const metaTitle: string = "Projects - Gigi Shalamberidze";
-const metaDescription: string = "Explore my previous projects as a Web Developer & Web Designer. Filter projects by all, design, or coding.";
-const metaKeywords: string = "Web Developer, Web Designer, Projects, Design, Coding";
+const metaDescription: string =
+  "Explore my previous projects as a Web Developer & Web Designer. Filter projects by all, design, or coding.";
+const metaKeywords: string =
+  "Web Developer, Web Designer, Projects, Design, Coding";
 usePageMetaData(metaTitle, metaDescription, metaKeywords);
 
 const projectsFilter: FilterBtnsArr[] = [

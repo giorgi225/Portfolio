@@ -7,7 +7,7 @@
         <div class="w-full flex flex-col gap-6">
           <div class="w-full flex items-center justify-between">
             <p class="font-mainMedium text-xl text-black">
-              {{ $t("get_in_touch") }}
+              {{ t("get_in_touch") }}
             </p>
             <div @click="closeModal" class="cursor-pointer group">
               <IconBase
@@ -20,12 +20,12 @@
             <div class="flex flex-col gap-5">
               <div class="flex flex-col gap-2">
                 <label for="name" class="font-mainLight text-sm text-black">{{
-                  $t("name")
+                  t("name")
                 }}</label>
                 <input
                   v-model="formData.name"
                   type="text"
-                  :placeholder="$t('what_should_i_call_you')"
+                  :placeholder="t('what_should_i_call_you')"
                   class="w-full px-2 py-3 font-mainLight text-sm text-black-80 bg-transparent outline-none placeholder-empty:hidden placeholder:text-grayDark2 border border-t-transparent border-l-transparent border-r-transparent focus:border-l-grayDark focus:border-t-grayDark focus:border-r-grayDark border-dashed border-b-grayDark transition-all"
                   id="name"
                 />
@@ -33,22 +33,20 @@
 
               <div class="flex flex-col gap-2">
                 <label for="email" class="font-mainLight text-sm text-black">{{
-                  $t("email_or_phone")
+                  t("email_or_phone")
                 }}</label>
                 <input
                   v-model="formData.emailOrPhone"
                   type="text"
-                  :placeholder="$t('how_can_i_reach_you')"
+                  :placeholder="t('how_can_i_reach_you')"
                   class="w-full px-2 py-3 font-mainLight text-sm text-black-80 bg-transparent outline-none placeholder-empty:hidden placeholder:text-grayDark2 border border-t-transparent border-l-transparent border-r-transparent focus:border-l-grayDark focus:border-t-grayDark focus:border-r-grayDark border-dashed border-b-grayDark transition-all"
                   id="email"
                 />
               </div>
 
               <div class="flex flex-col gap-2">
-                <div
-                  class="font-mainLight text-sm text-black"
-                >
-                  {{ $t("choose_service") }}
+                <div class="font-mainLight text-sm text-black">
+                  {{ t("choose_service") }}
                   {{ subjectIsValid }}
                 </div>
 
@@ -63,7 +61,7 @@
                     <div
                       class="w-full flex items-center justify-center px-2 py-3 font-mainLight text-sm text-black-80 border border-t-transparent border-l-transparent border-r-transparent hover:border-l-grayDark hover:border-t-grayDark hover:border-r-grayDark peer-checked:bg-black-80 peer-checked:hover:bg-black peer-checked:text-white peer-checked:border-transparent border-dashed border-b-grayDark transition-all"
                     >
-                      {{ $t("design") }}
+                      {{ t("design") }}
                     </div>
                   </label>
                   <label class="cursor-pointer">
@@ -76,7 +74,7 @@
                     <div
                       class="w-full flex items-center justify-center px-2 py-3 font-mainLight text-sm text-black-80 border border-t-transparent border-l-transparent border-r-transparent hover:border-l-grayDark hover:border-t-grayDark hover:border-r-grayDark peer-checked:bg-black-80 peer-checked:hover:bg-black peer-checked:text-white peer-checked:border-transparent border-dashed border-b-grayDark transition-all"
                     >
-                      {{ $t("coding") }}
+                      {{ t("coding") }}
                     </div>
                   </label>
                   <label class="cursor-pointer">
@@ -89,7 +87,7 @@
                     <div
                       class="w-full flex items-center justify-center px-2 py-3 font-mainLight text-sm text-black-80 border border-t-transparent border-l-transparent border-r-transparent hover:border-l-grayDark hover:border-t-grayDark hover:border-r-grayDark peer-checked:bg-black-80 peer-checked:hover:bg-black peer-checked:text-white peer-checked:border-transparent border-dashed border-b-grayDark transition-all"
                     >
-                      {{ $t("other") }}
+                      {{ t("other") }}
                     </div>
                   </label>
                 </div>
@@ -97,12 +95,12 @@
 
               <div v-if="checkboxes.other" class="flex flex-col gap-2">
                 <label for="email" class="font-mainLight text-sm text-black">{{
-                  $t("subject")
+                  t("subject")
                 }}</label>
                 <input
                   type="text"
                   v-model="formData.subject"
-                  :placeholder="$t('please_specify_the_topic_briefly')"
+                  :placeholder="t('please_specify_the_topic_briefly')"
                   class="w-full px-2 py-3 font-mainLight text-sm text-black-80 bg-transparent outline-none placeholder-empty:hidden placeholder:text-grayDark2 border border-t-transparent border-l-transparent border-r-transparent focus:border-l-grayDark focus:border-t-grayDark focus:border-r-grayDark border-dashed border-b-grayDark transition-all"
                   id="email"
                 />
@@ -110,11 +108,11 @@
 
               <div class="flex flex-col gap-2">
                 <label for="email" class="font-mainLight text-sm text-black">{{
-                  $t("message")
+                  t("message")
                 }}</label>
                 <textarea
                   v-model="formData.message"
-                  :placeholder="$t('please_provide_more_details')"
+                  :placeholder="t('please_provide_more_details')"
                   class="w-full min-h-[100px] px-2 py-3 font-mainLight bg-transparent text-sm text-black-80 outline-none placeholder-empty:hidden placeholder:text-grayDark2 border resize-none focus:border-black-80 border-dashed border-grayDark transition-all"
                   id="email"
                 ></textarea>
@@ -126,7 +124,7 @@
                 <p
                   class="group-hover:text-white font-mainLight text-base text-black transition-all"
                 >
-                  {{ $t("send") }}
+                  {{ t("send") }}
                 </p>
               </button>
             </div>
@@ -138,12 +136,14 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { Ref, ref, computed } from "vue";
 import { Checkboxes, FormData } from "@/imports";
+const {t} = useI18n()
 const checkboxes: Ref<Checkboxes> = ref({
-  coding: "",
-  design: "",
-  other: "",
+  coding: false,
+  design: false,
+  other: false,
 });
 const formData: Ref<FormData> = ref({
   name: "",
@@ -174,8 +174,8 @@ const handleOtherCheckboxChange = () => {
     formData.value.subject = [];
   }
 };
-const subjectIsValid: boolean = computed(() => {
-  
+const subjectIsValid = computed<boolean>(() => {
+  return true
 });
 const handleSubmit = () => {
   if (!checkboxes.value.other) {
@@ -187,6 +187,6 @@ const handleSubmit = () => {
       formData.value.subject = ["coding"];
     }
   }
-  console.log(formData.value.subject)
+  console.log(formData.value.subject);
 };
 </script>
