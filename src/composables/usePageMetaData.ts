@@ -2,20 +2,7 @@ import { useHead } from "@vueuse/head";
 import { ref, onMounted } from "vue";
 
 import OgImage from "@/assets/images/thumbnail.svg";
-interface useStructuredData {
-  name: string;
-  url: string;
-  description: string;
-  datePublished: string;
-  logo: string,
-}
-const structuredData: useStructuredData = {
-  name: "Gigi Shalamberidze",
-  url: "URL of your website",
-  description: "Portfolio website of Gigi Shalamberidze",
-  datePublished: "2023-08-28",
-  logo: OgImage,
-};
+
 export function usePageMetaData(
   title: string,
   description: string,
@@ -64,20 +51,6 @@ export function usePageMetaData(
       {
         property: "og:image",
         content: OgImage,
-      },
-    ],
-    script: [
-      {
-        type: "application/ld+json",
-        innerHTML: JSON.stringify({
-          "@context": "http://schema.org",
-          "@type": "Person",
-          name: structuredData.name,
-          url: structuredData.url,
-          description: structuredData.description,
-          datePublished: structuredData.datePublished,
-          logo: structuredData.logo,
-        }),
       },
     ],
   });
