@@ -17,9 +17,11 @@ export function useClipboard() {
         setTimeout(() => {
           targetDiv.classList.remove("copied");
         }, 1200);
+        alert(true)
       })
       .catch((err) => {
         console.log("Unable to copy text: ", err);
+        alert(err)
       });
 
     document.body.removeChild(input);
