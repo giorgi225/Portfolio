@@ -35,7 +35,7 @@
     </div>
 
     <div class="hidden md:flex w-full h-full">
-      <div class="relative h-full ml-auto">
+      <div class="relative w-full h-full ml-auto">
         <div
           class="h-full min-h-[350px] max-h-[350px] lg:max-h-[500px] absolute flex items-end bottom-[0px] right-[-150px]"
         >

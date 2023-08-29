@@ -45,12 +45,12 @@ const books = [
   {
     countryName: "english",
     countryCode: "en",
-    flag: "/src/assets/images/flags/en.svg",
+    flag: `${window.location.origin}/src/assets/images/flags/en.svg`,
   },
   {
     countryName: "georgian",
     countryCode: "ka",
-    flag: "/src/assets/images/flags/ka.svg",
+    flag: `${window.location.origin}/src/assets/images/flags/ka.svg`,
   },
 ];
 
