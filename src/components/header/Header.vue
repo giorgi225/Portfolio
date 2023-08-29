@@ -3,7 +3,7 @@
     <div class="w-full flex items-center justify-between">
       <Logo />
       <div @click="toggleSidebar" class="cursor-pointer">
-        <IconBase v-if="!isActive"
+        <IconBase v-if="!props.isActive"
           icon="gg:menu-right-alt"
           class="text-black-80 hover:text-black text-2xl transition-all"
         />
