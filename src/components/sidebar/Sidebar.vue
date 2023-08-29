@@ -1,24 +1,19 @@
 <template>
-  <aside class="min-w-[260px] max-w-[260px] h-full p-2 pr-0">
+  <aside
+    :class="`${props.isActive ? 'md:fixed md:left-[0px] bg-grayLight z-[999] shadow-xl' : 'md:fixed md:left-[-100%]'} h-max md:h-full lg:shadow-none lg:relative lg:left-0 md:min-w-[260px] md:max-w-[260px] h-full px-3 md:p-2 pr-0 transition-all`"
+  >
     <div class="w-full h-full flex flex-col items-start justify-between">
       <div class="flex flex-col items-start gap-4 w-full">
-        <RouterLink
-          class="flex w-full max-w-[77px]"
-          :to="{ name: RouteName.HOME }"
-        >
-          <img
-            class="w-full toggle-image"
-            src="@/assets/images/Logo.svg"
-            alt="Logo"
-          />
-        </RouterLink>
-        <div class="flex border-t border-b border-grayLight2 py-3 w-full">
+        <div class="hidden md:flex">
+          <Logo />
+        </div>
+        <div class="flex h-[78px] md:h-auto md:border-t md:border-b border-grayLight2 md:py-3 w-full">
           <nav
-            class="h-[calc(100vh-190px)] overflow-auto no-scrollbar pr-2 flex flex-col w-full gap-4"
+            class="nav md:h-[calc(100vh-190px)] overflow-auto no-scrollbar pr-2 flex md:flex-col w-full gap-4"
           >
-            <NavList :title="t('pages')" :menu="PagesMenu" :hasRoutes="true" />
+            <NavList @closeSidebar="closeSidebar" :title="t('pages')" :menu="PagesMenu" :hasRoutes="true" />
 
-            <NavList
+            <NavList @closeSidebar="closeSidebar"
               :title="t('get_in_touch')"
               :menu="ContactMenu"
               @openContactModal="openContactModal"
@@ -35,17 +30,17 @@
               <div
                 class="group flex items-center justify-between w-full px-2 py-2 rounded hover:bg-grayLight2 transition-all"
               >
-                <div class="flex items-center gap-2">
+                <div class="flex flex-col md:flex-row items-center gap-2">
                   <IconBase
                     icon="solar:moon-linear"
                     class="text-black text-base"
                   />
-                  <p class="font-mainLight text-sm text-black">
+                  <p class="min-w-max md:min-w-auto font-mainLight text-sm text-black">
                     {{ t("dark_mode") }}
                   </p>
                 </div>
                 <label
-                  class="relative flex items-center p-0.5 w-[39px] h-[20px] rounded-full bg-grayLight2 cursor-pointer group-hover:bg-white transition-all"
+                  class="relative flex items-center ml-4 md:ml-0 p-0.5 w-[39px] h-[20px] rounded-full bg-grayLight2 cursor-pointer group-hover:bg-white transition-all"
                 >
                   <input
                     type="checkbox"
@@ -60,11 +55,11 @@
               </div>
 
               <div
-                class="group flex items-center justify-between w-full px-2 py-2 rounded hover:bg-grayLight2 transition-all"
+                class="group flex flex-col md:flex-row items-center justify-between w-full px-2 py-2 rounded hover:bg-grayLight2 transition-all"
               >
                 <div class="flex items-center gap-2">
                   <IconBase icon="et:global" class="text-black text-base" />
-                  <p class="font-mainLight text-sm text-black">
+                  <p class="hidden md:flex font-mainLight text-sm text-black">
                     {{ t("language") }}
                   </p>
                 </div>
@@ -74,7 +69,7 @@
           </nav>
         </div>
       </div>
-      <div class="w-full flex items-center justify-center">
+      <div class="hidden md:flex w-full flex items-center justify-center">
         <p class="font-mainLight text-black text-xs text-center">
           {{ t("copyright") }}
         </p>
@@ -88,14 +83,25 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { ref, Ref, onMounted } from "vue";
-import { RouteName, useClipboard } from "@/imports.ts";
+import { useClipboard } from "@/imports.ts";
 import {
   PagesMenu,
   ContactMenu,
   SocialPlatformMenu,
 } from "@/controllers/menuController";
 
+const emit = defineEmits(['closeSidebar'])
+const closeSidebar = ()=> {
+    emit('closeSidebar')
+}
 const { t } = useI18n();
+const props = defineProps({
+  isActive: {
+    type: Boolean,
+    required: true
+  }
+})
+
 const contactModal: Ref<boolean> = ref(false);
 const openContactModal = () => {
   toggleContactModal();

@@ -38,7 +38,7 @@
           class="w-full flex flex-col gap-3 pt-2 pb-4 border-b-2 border-dashed border-grayLight2"
         >
           <div class="w-full flex items-center justify-between gap-4">
-            <p class="font-mainBold text-2xl text-black">
+            <p class="flex font-mainBold text-xl md:text-2xl text-black">
               {{ t(item.title) }}
             </p>
             <div class="flex items-center gap-2">
@@ -54,11 +54,11 @@
                 } flex items-center gap-[6px] px-4 py-2 rounded`"
               >
                 <IconBase :icon="categoryItem.icon" />
-                {{ t(categoryItem.text) }}
+                <p class="hidden md:flex">{{ t(categoryItem.text) }}</p>
               </div>
             </div>
           </div>
-          <div class="flex items-center gap-[6px]">
+          <div class="flex flex-wrap items-center gap-[6px]">
             <div
               v-for="(skill, skillIndex) in item.skills"
               :key="skillIndex"
@@ -68,7 +68,7 @@
                 :icon="skill.programingLanguageIcon"
                 class="text-black"
               />
-              <p class="font-mainLight text-sm text-black">
+              <p class="font-mainLight text-xs md:text-sm text-black">
                 {{ skill.programingLanguage }}
               </p>
             </div>

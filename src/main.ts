@@ -20,6 +20,8 @@ import PageLayout from "@/components/layout/pageLayout.vue";
 import ContactInformation from "@/components/contact/ContactInformation.vue";
 import FilterBtns from "@/components/btn/filterBtns.vue";
 import ContactModal from "@/components/contact/ContactModal.vue";
+import Logo from "@/components/logo/Logo.vue";
+import Header from "@/components/header/Header.vue"
 
 const i18n = createI18n({
   legacy: false,
@@ -37,6 +39,7 @@ const head = createHead();
 app
   .component("v-select", VueSelect)
   .component("Sidebar", Sidebar)
+  .component("Header", Header)
   .component("NavList", NavList)
   .component("IconBase", IconBase)
   .component("LangSelect", LangSelect)
@@ -44,6 +47,7 @@ app
   .component("FilterBtns", FilterBtns)
   .component("ContactInformation", ContactInformation)
   .component("ContactModal", ContactModal)
+  .component("Logo", Logo)
 
   .use(router)
   .use(i18n)

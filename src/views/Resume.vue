@@ -1,7 +1,9 @@
 <template>
   <PageLayout>
     <template #introduction>
+      <p class="font-mainLight text-sm text-black leading-[20px]">
       {{ t("resume_introduction") }}
+      </p>
     </template>
 
     <div class="w-full flex flex-col gap-6">

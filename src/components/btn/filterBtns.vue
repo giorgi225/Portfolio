@@ -11,7 +11,7 @@
       } flex items-end gap-2 px-4 py-2 bg-grayLight hover:bg-grayLight2 rounded transition-all`"
     >
       <IconBase v-if="item.icon" :icon="item.icon" class="text-md" />
-      <p class="font-mainMedium text-xs leading-[20px]">{{ t(item.text) }}</p>
+      <p :class="`${item.text === 'all' ? '' : 'hidden md:flex'} font-mainMedium text-xs leading-[20px]`">{{ t(item.text) }}</p>
     </button>
   </div>
 </template>

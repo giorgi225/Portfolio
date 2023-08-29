@@ -1,12 +1,12 @@
 <template>
-  <div class="container-main py-20">
+  <div class="container-main  py-5 lg:py-20">
     <div class="w-full flex flex-col gap-6">
       <div v-if="!props.hasFilter && !props.filterArr" class="w-full">
         <h2 v-if="currentRoute" class="font-mainMedium text-2xl text-black">
           {{ t(currentRoute) }}
         </h2>
       </div>
-      <div v-else class="w-full flex items-center justify-between">
+      <div v-else class="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-10 md:gap-0">
         <h3 v-if="currentRoute" class="font-mainMedium text-2xl text-black">
           {{ t(currentRoute) }}
         </h3>
@@ -16,9 +16,7 @@
           @handleFilter="handleFilter"
         />
       </div>
-      <p class="font-mainLight text-sm text-black leading-[20px]">
-        <slot name="introduction" />
-      </p>
+      <slot name="introduction" />
       <slot />
     </div>
   </div>

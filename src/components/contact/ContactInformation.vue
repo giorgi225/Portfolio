@@ -1,9 +1,9 @@
 <template>
   <div class="w-full flex flex-col gap-3">
     <h5 class="font-mainMedium text-md text-black">{{ t("contact") }}</h5>
-    <div class="w-full flex flex-col gap-6">
+    <div class="w-full flex flex-col gap-2 md:gap-6">
       <div
-        class="w-full flex items-center justify-between pb-3 border-b border-dashed border-grayDark"
+        class="w-full flex flex-col md:flex-row items-start gap-4 md:items-center justify-between pb-3 border-b border-dashed border-grayDark"
       >
         <div class="flex flex-col gap-1">
           <p class="font-mainLight text-sm text-black leading-[20px]">
@@ -54,7 +54,7 @@
         </div>
       </div>
       <div
-        class="w-full flex items-center justify-between pb-3 border-b border-dashed border-grayDark"
+        class="w-full flex flex-col md:flex-row items-start gap-4 md:items-center justify-between pb-3 border-b border-dashed border-grayDark"
       >
         <div class="flex flex-col gap-1">
           <p class="font-mainLight text-sm text-black leading-[20px]">
@@ -105,7 +105,7 @@
         </div>
       </div>
       <div
-        class="w-full flex items-center justify-between pb-3 border-b border-dashed border-grayDark"
+        class="w-full flex flex-col md:flex-row items-start gap-4 md:items-center justify-between pb-3 border-b border-dashed border-grayDark"
       >
         <div class="flex flex-col gap-1">
           <p class="font-mainLight text-sm text-black leading-[20px]">
@@ -123,7 +123,7 @@
             class="copied-btn flex items-end gap-2 bg-transparent px-4 py-2 hover:bg-grayLight border border border-grayLight2 active:scale-[0.98] transition-all"
           >
             <IconBase :icon="item.icon" class="check-icon text-md text-black" />
-            <p class="font-mainLight text-sm text-black leading-[20px]">
+            <p class="hidden md:flex font-mainLight text-sm text-black leading-[20px]">
               {{ item.text }}
             </p>
           </a>
