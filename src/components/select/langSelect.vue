@@ -38,19 +38,20 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { ref } from "vue";
-
+import EnFlag from "@/assets/images/flags/en.svg"
+import KaFlag from "@/assets/images/flags/ka.svg"
 const { t, locale } = useI18n();
 
 const books = [
   {
     countryName: "english",
     countryCode: "en",
-    flag: `${window.location.origin}/src/assets/images/flags/en.svg`,
+    flag: EnFlag,
   },
   {
     countryName: "georgian",
     countryCode: "ka",
-    flag: `${window.location.origin}/src/assets/images/flags/ka.svg`,
+    flag: KaFlag,
   },
 ];
 
@@ -109,7 +110,7 @@ const changeLocale = () => {
     position: absolute;
     bottom: calc(100% + 15px);
     width: 100%;
-    min-width: 240px;
+    min-width: 230px;
     right: -9px;
   }
 }

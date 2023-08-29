@@ -85,6 +85,12 @@ import { ref, Ref, onMounted } from "vue";
 import { ProjectsArr, FilterBtnsArr, ProjectFilter } from "@/imports";
 import { usePageMetaData } from "@/composables/usePageMetaData";
 
+import GoodFrindImage from "@/assets/images/projects/goodfriend.svg"
+import SocialPlatformImage from "@/assets/images/projects/socialplatform.svg"
+import FlickersImage from "@/assets/images/projects/flickers.svg"
+import CineManiaImage from "@/assets/images/projects/cinemania.svg"
+import ApedImage from "@/assets/images/projects/aped.svg"
+
 const { t } = useI18n();
 const metaTitle: string = "Projects - Gigi Shalamberidze";
 const metaDescription: string =
@@ -131,7 +137,7 @@ const projectsArr: ProjectsArr[] = [
         programingLanguageIcon: "mdi:tailwind",
       },
     ],
-    image: "/src/assets/images/projects/goodfriend.svg",
+    image: GoodFrindImage,
     link: "https://demo.goodfriendsgaming.com/",
   },
   {
@@ -148,7 +154,7 @@ const projectsArr: ProjectsArr[] = [
         programingLanguageIcon: "solar:figma-outline",
       },
     ],
-    image: "/src/assets/images/projects/socialplatform.svg",
+    image: SocialPlatformImage,
     link: "https://www.figma.com/proto/tVVpeVqlRkDc7507zpttsu/Social-Platform?page-id=0%3A1&type=design&node-id=86-6&viewport=447%2C272%2C0.1&t=cJagNm7Uk3OcvGir-1&scaling=min-zoom&mode=design",
   },
   {
@@ -169,7 +175,7 @@ const projectsArr: ProjectsArr[] = [
         programingLanguageIcon: "mdi:tailwind",
       },
     ],
-    image: "/src/assets/images/projects/aped.svg",
+    image: ApedImage,
     link: "https://apedtrade.vercel.app/",
   },
   {
@@ -186,7 +192,7 @@ const projectsArr: ProjectsArr[] = [
         programingLanguageIcon: "solar:figma-outline",
       },
     ],
-    image: "/src/assets/images/projects/flickers.svg",
+    image: FlickersImage,
     link: "https://www.figma.com/proto/id3IOeaBxJUYKfmbb3NHO0/Untitled?page-id=10%3A7023&node-id=11-7207&mode=design&t=Akdp1Jcu4WyJl7Zb-1",
   },
   {
@@ -219,7 +225,7 @@ const projectsArr: ProjectsArr[] = [
         programingLanguageIcon: "fluent:javascript-20-regular",
       },
     ],
-    image: "/src/assets/images/projects/cinemania.svg",
+    image: CineManiaImage,
     link: "https://cinemania22.netlify.app/",
   },
 ];
