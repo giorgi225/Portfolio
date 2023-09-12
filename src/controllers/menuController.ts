@@ -66,6 +66,12 @@ const SocialPlatformMenu: Menu[] = [
     secondIcon: "ion:open-outline",
   },
   {
+    text: "Dribbble",
+    link: "https://dribbble.com/shalambo",
+    icon: "fa6-brands:square-dribbble",
+    secondIcon: "ion:open-outline",
+  },
+  {
     text: "Github",
     link: "https://github.com/giorgi225",
     icon: "skill-icons:github-dark",
