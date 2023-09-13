@@ -274,9 +274,6 @@ const handleDisplayProjects = () => {
 };
 const loaders = ref(Array(projectsArr.length).fill(true));
 const handleLoad = (index: number) => {
-  if (index === 4) {
-    return;
-  }
   loaders.value[index] = false;
 };
 console.log(loaders);
