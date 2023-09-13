@@ -11,7 +11,7 @@
         :key="index"
         class="w-full flex flex-col gap-2"
       >
-        <div v-if="loaders[index]" class="w-full h-[450px] flex items-center justify-center bg-grayLight2 rounded-[11px]">
+        <div v-if="loaders[index]" class="w-full h-[250px] md:h-[450px] flex items-center justify-center bg-grayLight2 rounded-[11px]">
           <div role="status">
             <svg
               aria-hidden="true"
