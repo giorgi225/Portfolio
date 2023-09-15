@@ -1,5 +1,5 @@
 <template>
-  <div class="container-main  py-5 lg:py-20">
+  <div class="container-main  py-5 lg:py-20 scale-animation">
     <div class="w-full flex flex-col gap-6">
       <div v-if="!props.hasFilter && !props.filterArr" class="w-full">
         <h2 v-if="currentRoute" class="font-mainMedium text-2xl text-black">
