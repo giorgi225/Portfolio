@@ -2,7 +2,7 @@
   <div class="fixed top-0 left-0 w-full h-screen bg-grayDark-30 z-[9999]">
     <div class="relative flex w-full h-full overflow-auto">
       <div
-        class="w-full max-w-[540px] py-8 px-6 bg-white shadow-md m-auto rounded-[12px]"
+        class="w-full max-w-[540px] py-8 px-6 bg-white shadow-md m-auto rounded-[12px] scale-animation"
       >
         <div class="w-full flex flex-col gap-6">
           <div class="w-full flex items-center justify-between">
