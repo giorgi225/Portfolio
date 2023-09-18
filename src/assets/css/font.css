@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'main-black-italic';
-    src: url('../fonts/CeraProBlackItalic.otf');
+    /* src: url('../fonts/CeraProBlackItalic.otf'); */
+    src: url('../fonts/montserat/Montserrat-BlackItalic.ttf');
 }
 .font-mainBlack-italic {
     font-weight: 900;
@@ -9,7 +10,8 @@
 
 @font-face {
     font-family: 'main-black';
-    src: url('../fonts/CeraProBlack.otf');
+    /* src: url('../fonts/CeraProBlack.otf'); */
+    src: url('../fonts/montserat/Montserrat-Black.ttf');
 }
 .font-mainBlack {
     font-family: 'main-black';
@@ -18,7 +20,8 @@
 
 @font-face {
     font-family: 'main-bold';
-    src: url('../fonts/CeraProBold.otf');
+    /* src: url('../fonts/CeraProBold.otf'); */
+    src: url('../fonts/montserat/Montserrat-Bold.ttf');
 }
 .font-mainBold {
     font-family: 'main-bold';
@@ -27,7 +30,8 @@
 
 @font-face {
     font-family: 'main-medium';
-    src: url('../fonts/CeraProMedium.otf');
+    /* src: url('../fonts/CeraProMedium.otf'); */
+    src: url('../fonts/montserat/Montserrat-Medium.ttf');
 }
 .font-mainMedium {
     font-family: 'main-medium';
@@ -36,7 +40,8 @@
 
 @font-face {
     font-family: 'main-light';
-    src: url('../fonts/CeraProLight.otf');
+    /* src: url('../fonts/CeraProLight.otf'); */
+    src: url('../fonts/montserat/Montserrat-Light.ttf');
 }
 .font-mainLight {
     font-family: 'main-light';

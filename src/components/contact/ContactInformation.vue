@@ -6,7 +6,7 @@
         class="w-full flex flex-col md:flex-row items-start gap-4 md:items-center justify-between pb-3 border-b border-dashed border-grayDark"
       >
         <div class="flex flex-col gap-1">
-          <p class="font-mainLight text-sm text-black leading-[20px]">
+          <p class="font-mainMedium text-sm text-black leading-[20px]">
             {{ t("email") }}
           </p>
           <p class="font-mainLight text-xs text-black-80 leading-[20px]">
@@ -57,7 +57,7 @@
         class="w-full flex flex-col md:flex-row items-start gap-4 md:items-center justify-between pb-3 border-b border-dashed border-grayDark"
       >
         <div class="flex flex-col gap-1">
-          <p class="font-mainLight text-sm text-black leading-[20px]">
+          <p class="font-mainMedium text-sm text-black leading-[20px]">
             {{ t("phone") }}
           </p>
           <p class="font-mainLight text-xs text-black-80 leading-[20px]">
@@ -108,7 +108,7 @@
         class="w-full flex flex-col md:flex-row items-start gap-4 md:items-center justify-between pb-3 border-b border-dashed border-grayDark"
       >
         <div class="flex flex-col gap-1">
-          <p class="font-mainLight text-sm text-black leading-[20px]">
+          <p class="font-mainMedium text-sm text-black leading-[20px]">
             {{ t("get_in_touch") }}
           </p>
           <p class="font-mainLight text-xs text-black-80 leading-[20px]">

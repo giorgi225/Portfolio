@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex flex-col gap-2 min-w-max md:min-w-auto">
-    <h6 class="hidden md:flex font-mainLight text-sm text-black2 tracking-[4%]">
+    <h6 class="hidden md:flex font-mainMedium text-xs text-black2 tracking-[4%]">
       {{ props.title }}
     </h6>
     <ul v-if="!props.customProp" class="w-full flex md:flex-col gap-4 md:gap-2">
@@ -13,7 +13,7 @@
           class="min-w-max md:min-w-auto flex flex-col md:flex-row items-center gap-2 w-full px-4 md:px-2 py-2 rounded hover:bg-grayLight2 active:scale-[0.98] active:bg-grayLight2 transition-all"
         >
           <IconBase :icon="item.icon" class="text-black text-base" />
-          <p class="font-mainLight text-sm text-black">{{ t(item.text) }}</p>
+          <p class="font-mainMedium text-xs text-black">{{ t(item.text) }}</p>
         </RouterLink>
 
         <div
@@ -22,7 +22,7 @@
           class="min-w-max md:min-w-auto flex flex-col md:flex-row items-center gap-2 w-full px-4 md:px-2 py-2 rounded hover:bg-grayLight2 cursor-pointer active:scale-[0.98] active:bg-grayLight2 transition-all"
         >
           <IconBase :icon="item.icon" class="text-black text-base" />
-          <p class="font-mainLight text-sm text-black">{{ t(item.text) }}</p>
+          <p class="font-mainMedium text-xs text-black">{{ t(item.text) }}</p>
         </div>
 
         <div
@@ -33,7 +33,7 @@
             class="min-w-max md:min-w-auto hidden md:flex flex-col md:flex-row items-center gap-2"
           >
             <IconBase :icon="item.icon" class="text-black text-base" />
-            <p class="font-mainLight text-sm text-black lowercase">
+            <p class="font-mainMedium text-xs text-black lowercase">
               {{
                 item.text.length > 18
                   ? item.text.slice(0, 18) + "..."
@@ -45,7 +45,7 @@
             class="min-w-max md:min-w-auto md:hidden flex flex-col md:flex-row items-center gap-2"
           >
             <IconBase :icon="item.icon" class="text-black text-base" />
-            <p class="font-mainLight text-sm text-black lowercase">
+            <p class="font-mainMedium text-xs text-black lowercase">
               {{
                 item.text.length > 9 ? item.text.slice(0, 9) + "..." : item.text
               }}
@@ -74,7 +74,7 @@
         >
           <div class="flex flex-col md:flex-row items-center gap-2">
             <IconBase :icon="item.icon" class="text-black text-base" />
-            <p class="font-mainLight text-sm text-black lowercase">
+            <p class="font-mainMedium text-xs text-black lowercase">
               {{ item.text }}
             </p>
           </div>

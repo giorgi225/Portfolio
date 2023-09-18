@@ -9,7 +9,7 @@
   >
     <template #selected-option="option">
       <div class="flex items-center gap-2 cursor-pointer">
-        <p class="font-mainLight text-sm text-black">
+        <p class="font-mainMedium text-sm text-black-80">
           {{ t(option.countryName) }}
         </p>
         <IconBase icon="ep:arrow-down" />
@@ -27,7 +27,7 @@
           :src="option.flag"
           class="w-[15px] h-auto"
         />
-        <p class="font-mainLight text-sm text-black">
+        <p class="font-mainMedium text-sm text-black">
           {{ t(option.countryName) }}
         </p>
       </div>

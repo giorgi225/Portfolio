@@ -5,7 +5,7 @@
     <div class="w-full h-full md:min-w-max">
       <div class="flex items-end gap-6">
         <h1
-          class="font-mainBlack text-[8vw] md:text-[6vw] text-black md:max-w-[46vw] leading-[8vw] md:leading-[7vw] tracking-[1px]"
+          class="font-mainBlack text-[8vw] md:text-[6vw] text-black md:max-w-[48vw] leading-[8vw] md:leading-[7vw] tracking-[1px]"
         >
           {{ t("web_designer") }}
           <span class="text-stroke-black">& {{ t("developer") }}</span>
@@ -22,7 +22,7 @@
           />
         </div>
         <div class="flex flex-col gap-4">
-          <p class="font-mainLight text-base text-black-80 md:max-w-[418px]">
+          <p class="font-mainMedium text-base text-black-80 md:max-w-[418px]">
             {{ t("welcome_text") }}
           </p>
           <button @click="openContactModal"

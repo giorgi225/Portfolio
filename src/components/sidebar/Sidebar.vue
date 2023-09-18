@@ -35,7 +35,7 @@
                     icon="solar:moon-linear"
                     class="text-black text-base"
                   />
-                  <p class="min-w-max md:min-w-auto font-mainLight text-sm text-black">
+                  <p class="min-w-max md:min-w-auto font-mainMedium text-xs text-black">
                     {{ t("dark_mode") }}
                   </p>
                 </div>
@@ -59,7 +59,7 @@
               >
                 <div class="flex items-center gap-2">
                   <IconBase icon="et:global" class="text-black text-base" />
-                  <p class="hidden md:flex font-mainLight text-sm text-black">
+                  <p class="hidden md:flex font-mainMedium text-xs text-black">
                     {{ t("language") }}
                   </p>
                 </div>
@@ -70,7 +70,7 @@
         </div>
       </div>
       <div class="hidden md:flex w-full flex items-center justify-center">
-        <p class="font-mainLight text-black text-xs text-center">
+        <p class="font-mainMedium text-black text-xs text-center">
           {{ t("copyright") }}
         </p>
       </div>
