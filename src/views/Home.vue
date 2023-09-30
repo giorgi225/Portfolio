@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid md:grid-cols-2 lg:grid-cols-1 lg:grid-rows-[auto,1fr] h-[calc(100vh-80px)] lg:h-full gap-6 w-full md:px-10 overflow-hidden pt-20 scale-animation"
+    class="grid md:grid-cols-2 lg:grid-cols-1 lg:grid-rows-[auto,1fr] h-[calc(100vh-100px)] sm:h-[calc(100vh-80px)] lg:h-full gap-6 w-full md:px-10 overflow-hidden pt-20 scale-animation"
   >
     <div class="w-full h-full md:min-w-max">
       <div class="flex items-end gap-6">
@@ -34,16 +34,16 @@
       </div>
     </div>
 
-    <div class="hidden md:flex w-full h-full">
+    <div class="flex w-full h-full">
       <div class="relative w-full h-full ml-auto">
         <div
-          class="h-full min-h-[350px] max-h-[350px] lg:max-h-[500px] absolute flex items-end bottom-[0px] right-[-150px]"
+          class="h-full min-h-[180px] min-w-[180px] sm:min-h-[350px] sm:max-h-[350px] lg:max-h-[500px] absolute flex items-end bottom-[0px] right-[-30px] sm:right-[-150px]"
         >
           <p
-            class="absolute top-[-20px] left-[-50px] font-mainBlack-italic text-xl text-black max-w-[156px] leading-[1]"
+            class="absolute leading-[23px] sm:leading-[20px] top-[-20px] left-[-80px] sm:left-[-50px] font-mainBlack-italic sm:text-xl text-black max-w-[156px] leading-[1]"
           >
             <span class="text-success">{{ t("freelancer") }}</span>
-            {{ t("with") }} <span class="text-3xl">2</span>
+            {{ t("with") }} <span class="text-2xl sm:leading-[55px] sm:text-3xl">2</span>
             {{ t("years_experience") }}
           </p>
           <img
