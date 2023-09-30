@@ -1,15 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gigi Shalamberidze - Portfolio - Web Designer & Developer</title>
-    <link rel="icon" href ="/src/assets/images/favico.svg" type="image/x-icon" /> <link rel="shortcut icon" href="/src/assets/images/favico.svg" type="image/x-icon" />
-    <link rel="apple-touch-icon" sizes="120x120" href="./src/assets/images/apple-touch-icon-iphone-retina-120x120-precomposed.png" /> <link rel="apple-touch-icon" sizes="152x152" href="./src/assets/images/apple-touch-icon-ipad-retina-152x152-precomposed.png" />
+    <link rel="icon" href="/src/assets/images/favico.svg" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="/src/assets/images/favico.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./src/assets/images/apple-touch-icon-iphone-retina-120x120-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./src/assets/images/apple-touch-icon-ipad-retina-152x152-precomposed.png"
+    />
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+    <script>
+      window.addEventListener("scroll", function () {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+          // User has scrolled to the bottom
+          event.preventDefault();
+        }
+      });
+    </script>
   </body>
 </html>
