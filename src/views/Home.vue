@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid md:grid-cols-2 lg:grid-cols-1 lg:grid-rows-[auto,1fr] h-[calc(100vh-100px)] sm:h-[calc(100vh-80px)] lg:h-full gap-6 w-full md:px-10 overflow-hidden pt-20 scale-animation"
+    class="grid md:grid-cols-2 lg:grid-cols-1 lg:grid-rows-[auto,1fr] h-full md:h-[calc(100vh-80px)] lg:h-full gap-6 w-full md:px-10 overflow-hidden pt-20 scale-animation"
   >
     <div class="w-full h-full md:min-w-max">
       <div class="flex items-end gap-6">
