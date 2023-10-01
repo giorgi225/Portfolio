@@ -1,15 +1,15 @@
 <template>
   <aside
-    :class="`${props.isActive ? 'md:fixed md:left-[0px] bg-grayLight z-[999] shadow-xl' : 'md:fixed md:left-[-100%]'} fixed pt-2 md:pt-0 h-max md:h-full lg:shadow-none lg:relative lg:left-0 md:min-w-[260px] md:max-w-[260px] h-full px-3 md:p-2 pr-0 transition-all`"
+    :class="`${props.isActive ? 'fixed left-[0px] bg-grayLight z-[999] shadow-xl' : 'fixed left-[-100%]'} h-screen w-full top-0 pt-2 md:pt-2 h-max md:h-full lg:shadow-none lg:relative lg:left-0 md:min-w-[260px] md:max-w-[260px] h-full pt-4 p-2 pr-0 transition-all`"
   >
     <div class="w-full h-full flex flex-col items-start justify-between">
       <div class="flex flex-col items-start gap-4 w-full">
-        <div class="hidden md:flex">
+        <div class="flex">
           <Logo />
         </div>
-        <div class="flex h-[78px] md:h-auto md:border-t md:border-b border-grayLight2 md:py-3 w-full">
+        <div class="flex h-[78px] h-auto md:border-t md:border-b border-grayLight2 md:py-3 w-full">
           <nav
-            class="nav md:h-[calc(100vh-190px)] overflow-auto no-scrollbar pr-2 flex md:flex-col w-full gap-4"
+            class="nav h-[calc(100vh-80px)] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-180px)] overflow-auto no-scrollbar pr-2 flex flex-col w-full gap-4"
           >
             <NavList @closeSidebar="closeSidebar" :title="t('pages')" :menu="PagesMenu" :hasRoutes="true" />
 
@@ -30,7 +30,7 @@
               <div
                 class="group flex items-center justify-between w-full px-2 py-2 rounded hover:bg-grayLight2 transition-all"
               >
-                <div class="flex flex-col md:flex-row items-center gap-2">
+                <div class="flex flex-row items-center gap-2">
                   <IconBase
                     icon="solar:moon-linear"
                     class="text-black text-base"
@@ -40,7 +40,7 @@
                   </p>
                 </div>
                 <label
-                  class="relative flex items-center ml-4 md:ml-0 p-0.5 w-[39px] h-[20px] rounded-full bg-grayLight2 cursor-pointer group-hover:bg-white transition-all"
+                  class="relative flex items-center ml-0 p-0.5 w-[39px] h-[20px] rounded-full bg-grayLight2 cursor-pointer group-hover:bg-white transition-all"
                 >
                   <input
                     type="checkbox"
@@ -55,11 +55,11 @@
               </div>
 
               <div
-                class="group flex flex-col md:flex-row items-center justify-between w-full px-2 py-2 rounded hover:bg-grayLight2 transition-all"
+                class="group flex flex-row items-center justify-between w-full px-2 py-2 rounded hover:bg-grayLight2 transition-all"
               >
                 <div class="flex items-center gap-2">
                   <IconBase icon="et:global" class="text-black text-base" />
-                  <p class="hidden md:flex font-mainMedium text-xs text-black">
+                  <p class="flex font-mainMedium text-xs text-black">
                     {{ t("language") }}
                   </p>
                 </div>

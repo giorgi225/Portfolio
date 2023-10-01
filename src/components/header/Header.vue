@@ -1,8 +1,8 @@
 <template>
-  <div class="hidden md:flex lg:hidden w-full container-main py-4">
+  <div class="flex lg:hidden w-full container-main py-4">
     <div class="w-full flex items-center justify-between">
       <Logo />
-      <div @click="toggleSidebar" class="cursor-pointer">
+      <div @click="toggleSidebar" class="cursor-pointer z-[999999999999]">
         <IconBase v-if="!props.isActive"
           icon="gg:menu-right-alt"
           class="text-black-80 hover:text-black text-2xl transition-all"
