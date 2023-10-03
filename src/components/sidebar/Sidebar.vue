@@ -1,6 +1,6 @@
 <template>
   <aside
-    :class="`${props.isActive ? 'md:fixed md:left-[0px] bg-grayLight z-[999] shadow-xl' : 'md:fixed md:left-[-100%]'} bottom-0 bg-grayLight overflow-auto w-full fixed pt-2 md:pt-0 h-max md:h-full lg:shadow-none lg:relative lg:left-0 md:min-w-[260px] md:max-w-[260px] h-full px-3 md:p-2 pr-0 transition-all`"
+    :class="`${props.isActive ? 'md:fixed md:left-[0px] bg-grayLight shadow-xl' : 'md:fixed md:left-[-100%]'} z-[99999999] bottom-0 bg-grayLight overflow-auto w-full fixed pt-2 md:pt-0 h-max md:h-full lg:shadow-none lg:relative lg:left-0 md:min-w-[260px] md:max-w-[260px] h-full px-3 md:p-2 pr-0 transition-all`"
   >
     <div class="w-full h-full flex flex-col items-start justify-between">
       <div class="flex flex-col items-start gap-4 w-full">

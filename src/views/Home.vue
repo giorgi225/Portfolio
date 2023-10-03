@@ -1,11 +1,11 @@
 <template>
   <div
-    class="grid md:grid-cols-2 lg:grid-cols-1 lg:grid-rows-[auto,1fr] gap-6 w-full md:px-10 overflow-hidden pt-20 scale-animation"
+    class="grid md:grid-cols-2 lg:grid-cols-1 lg:grid-rows-[auto,1fr] gap-6 w-full md:px-10 overflow-hidden pt-10 md:pt-20 scale-animation"
   >
     <div class="w-full h-full md:min-w-max">
       <div class="flex items-end gap-6">
         <h1
-          class="font-mainBlack text-[8vw] md:text-[6vw] text-black md:max-w-[48vw] leading-[8vw] md:leading-[7vw] tracking-[1px]"
+          class="font-mainBlack text-[8vw] md:text-[6vw] text-black md:max-w-[48vw] leading-[9vw] md:leading-[8vw] md:leading-[7vw] tracking-[1px]"
         >
           {{ t("web_designer") }}
           <span class="text-stroke-black">& {{ t("developer") }}</span>
