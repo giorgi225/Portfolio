@@ -5,11 +5,11 @@ select,
 a {
     -webkit-tap-highlight-color: transparent;
 }
-
 body {
   font-family: theme("fontFamily.mainLight");
-  background: theme("colors.grayLight");
+  background: theme("colors.white");
 }
+
 
 .container-main {
   max-width: 1000px;
@@ -19,6 +19,11 @@ body {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: theme('screens.sm')) {
+  body {
+    background: theme('colors.grayLight');
   }
 }
 

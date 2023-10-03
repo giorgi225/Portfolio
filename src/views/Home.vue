@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid md:grid-cols-2 lg:grid-cols-1 lg:grid-rows-[auto,1fr] h-[calc(100vh-80px)] sm:h-[calc(100vh-80px)] lg:h-full gap-6 w-full md:px-10 overflow-hidden pt-10 sm:pt-20 scale-animation"
+    class="grid md:grid-cols-2 lg:grid-cols-1 lg:grid-rows-[auto,1fr] h-auto sm:h-[calc(100vh-80px)] lg:h-full gap-6 w-full md:px-10 overflow-hidden pt-10 sm:pt-20 scale-animation"
   >
     <div class="w-full h-full md:min-w-max">
       <div class="flex items-end gap-6">
@@ -30,29 +30,6 @@
           >
             {{ t("hire_me") }}
           </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="hidden sm:flex w-full h-full">
-      <div class="relative w-full h-full ml-auto">
-        <div
-          class="h-full min-h-[180px] min-w-[180px] sm:min-h-[350px] sm:max-h-[350px] lg:max-h-[500px] absolute flex items-end bottom-[0px] right-[-30px] sm:right-[-150px]"
-        >
-          <p
-            class="absolute leading-[23px] sm:leading-[20px] top-[-20px] left-[-80px] sm:left-[-50px] font-mainBlack-italic sm:text-xl text-black max-w-[156px] leading-[1]"
-          >
-            <span class="text-success">{{ t("freelancer") }}</span>
-            {{ t("with") }} <span class="text-2xl sm:leading-[55px] sm:text-3xl">2</span>
-            {{ t("years_experience") }}
-          </p>
-          <img
-            width="100"
-            height="100"
-            class="h-full w-auto"
-            src="@/assets/images/developer_illustration.svg"
-            alt="Developer Illustration"
-          />
         </div>
       </div>
     </div>
