@@ -2,7 +2,7 @@
   <div class="relative w-full h-screen lg:p-3">
     <div class="relative w-full h-full flex flex-col-reverse md:flex-col lg:flex-row gap-3">
       <Sidebar :isActive="sidebarActive" @closeSidebar="closeSidebar" />
-      <div class="w-full h-[20%] bg-white nav rounded overflow-auto no-scrollbar px-5 md:px-10 lg:px-20">
+      <div class="w-full h-full bg-white nav rounded overflow-auto no-scrollbar px-5 md:px-10 lg:px-20">
         <Header :isActive="sidebarActive" @toggleSidebar="toggleSidebar" />
         <RouterView></RouterView>
       </div>
